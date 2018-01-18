@@ -1,0 +1,19 @@
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    const iframe = document.createElement('iframe');
+    document.body.appendChild(iframe);
+    iframe.contentWindow.deleteFrame = () => {
+        iframe.contentDocument.close();
+        iframe.parentNode.removeChild(iframe);
+    }
+
+    iframe.contentDocument.write(`<script src="./index.js"></` + 'script>');
+</script>
+
+</html>
