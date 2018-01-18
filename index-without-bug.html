@@ -12,6 +12,7 @@
         iframe.contentDocument.close();
         iframe.parentNode.removeChild(iframe);
     }
+    iframe.contentDocument.open();
     iframe.contentDocument.write('<script>window.deleteFrame();</' + 'script>');
 </script>
 
